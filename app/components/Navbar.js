@@ -5,9 +5,9 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = () => {
   return (
-    <div className="bg-slate-100 py-2">
-      <div className="flex flex-col items-center md:flex-row md:justify-start">
-        <div className="logo mx-5">
+    <div className="flex flex-col items-center md:flex-row md:justify-start py-2 shadow-md">
+      <div className="logo mx-5">
+        <Link href={"/"}>
           <Image
             alt="FashionBlend"
             src={"/logo.jpeg"}
@@ -15,31 +15,31 @@ const Navbar = () => {
             height={50}
             className="rounded-full"
           />
-        </div>
-        <div className="nav">
-          <ul className="flex items-center space-x-4 font-semibold md:text-xl">
-            <Link href="/">
-              <li className="cursor-pointer">Home</li>
-            </Link>
+        </Link>
+      </div>
+      <div className="nav">
+        <ul className="flex items-center space-x-8 font-semibold">
+          <Link href="/shirts">
+            <li className="cursor-pointer">Shirts</li>
+          </Link>
 
-            <Link href="/about">
-              <li className="cursor-pointer">About</li>
-            </Link>
+          <Link href="/tshirts">
+            <li className="cursor-pointer">T-Shirts</li>
+          </Link>
 
-            <Link href="/contact">
-              <li className="cursor-pointer">Contact Us</li>
-            </Link>
+          <Link href="/hoodies">
+            <li className="cursor-pointer">Hoodies</li>
+          </Link>
 
-            <Link href="/login">
-              <li className="cursor-pointer">Login</li>
-            </Link>
-          </ul>
-        </div>
-        <div className="cart absolute right-0 top-2">
-          <button>
-            <CiShoppingCart className="text-xl md:text-3xl" />
-          </button>
-        </div>
+          <Link href="/jeans">
+            <li className="cursor-pointer">Jeans</li>
+          </Link>
+        </ul>
+      </div>
+      <div className="cart absolute right-0 top-2">
+        <button>
+          <CiShoppingCart className="text-xl md:text-2  xl" />
+        </button>
       </div>
     </div>
   );
