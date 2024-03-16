@@ -5,9 +5,6 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { BsBagCheckFill } from "react-icons/bs";
 
 const SidebarCart = ({ toggleCart }) => {
-  // Initialize state for sidebar visibility
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="">
       <h2 className="font-bold text-md text-center">Shopping Cart</h2>

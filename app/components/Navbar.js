@@ -60,7 +60,7 @@ const Navbar = () => {
       <div
         ref={cartRef}
         className="cart-sidebar absolute w-72 h-full top-0 right-0 bg-pink-100 px-8 py-10 transform transition-transform-
-        translate-x-full cursor-pointer shadow-md"
+        translate-x-full cursor-pointer shadow-md z-10"
       >
         <SidebarCart toggleCart={toggleCart} />
       </div>
