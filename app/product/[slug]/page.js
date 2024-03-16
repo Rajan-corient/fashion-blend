@@ -1,7 +1,27 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 
 const ProductInfo = ({ params, searchParams }) => {
+  const [pin, setPin] = useState("");
+  const [serviceAvailable, setServiceAvailable] = useState();
+  // const [pin, setPin] = useState("");
+  const onPinChange = (e) => {
+    setPin(e.target.value);
+  };
+
+  const checkServiceAvailability = async () => {
+    const res = await fetch("http://localhost:3000/api/pincode");
+    const pinData = await res.json();
+    console.log(pinData);
+    console.log(pin);
+    if (pinData.includes(parseInt(pin))) {
+      setServiceAvailable(true);
+    } else {
+      setServiceAvailable(false);
+    }
+  };
+
   return (
     <div>
       {/* <div>
@@ -18,10 +38,10 @@ const ProductInfo = ({ params, searchParams }) => {
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                BRAND NAME
+                FashionBlend
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                The Catcher in the Rye
+                Wear the trend
               </h1>
               <div className="flex mb-4">
                 <span className="flex items-center">
@@ -166,7 +186,10 @@ const ProductInfo = ({ params, searchParams }) => {
                   <MdOutlineCurrencyRupee className="inline" />
                   499.00
                 </span>
-                <button className="flex ml-14 text-sm text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">
+                <button className="flex ml-8 text-sm text-white bg-pink-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded">
+                  Buy Now
+                </button>
+                <button className="flex ml-4 text-sm text-white bg-pink-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded">
                   Add To Cart
                 </button>
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
@@ -181,6 +204,35 @@ const ProductInfo = ({ params, searchParams }) => {
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
                 </button>
+              </div>
+              <div className="pin flex mt-6">
+                <input
+                  type="text"
+                  placeholder="Enter your pincode"
+                  name="pincode"
+                  id="pincode"
+                  className="border-2 border-gray-400 rounded"
+                  value={pin}
+                  onChange={onPinChange}
+                />
+                <button
+                  onClick={checkServiceAvailability}
+                  className="border-2 border-pink-300 bg-pink-500 py-1 px-6 focus:outline-none text-white rounded ml-4"
+                >
+                  Check
+                </button>
+              </div>
+              <div className="mt-3">
+                {!serviceAvailable && serviceAvailable != null && (
+                  <span className="text-red-700">
+                    Sorry! we do not deliver to this pincode
+                  </span>
+                )}
+                {serviceAvailable && serviceAvailable != null && (
+                  <span className="text-green-700">
+                    Yay! This pincode is serviceable
+                  </span>
+                )}
               </div>
             </div>
           </div>
