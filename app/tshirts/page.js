@@ -19,7 +19,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -43,7 +43,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -67,7 +67,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -91,7 +91,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -115,7 +115,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -139,7 +139,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -163,7 +163,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
@@ -187,7 +187,7 @@ const Tshirts = () => {
                 </a>
                 <div className="mt-4 text-center md:text-left">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    T-Shirts
+                    T-Shirt
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Wear the trend
